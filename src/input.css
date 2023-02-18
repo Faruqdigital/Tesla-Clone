@@ -10,14 +10,48 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* @layer base{
-    h1{
-        @apply text-4xl;
-    }
-} */
-
 @layer components {
+    .navbar{
+        @apply flex justify-between w-full fixed top-0 z-10 h-28 px-10 items-center;
+    }
+
     .nav-items{
         @apply text-2xl font-semibold text-slate-900 py-2 px-5 rounded-[1.2rem] bg-transparent duration-500  hover:bg-slate-300;
+    }
+
+    .car-section{
+        @apply w-full h-screen
+    }
+
+    .car-img{
+        @apply w-full h-full object-cover;
+    }
+
+    .car-details{
+        @apply absolute top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center;
+    }
+
+    .car-name{
+        @apply font-semibold text-[4rem] text-slate-800;
+    }
+
+    .car-tagline{
+        @apply text-3xl text-slate-800;
+    }
+
+    .car-buttons{
+        @apply absolute bottom-[15%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+    }
+
+    .btn{
+        @apply inline-block text-xl text-white bg-gray-700 font-medium px-10 pt-4 mx-2 rounded-[10rem] text-center uppercase w-[25rem] h-18;
+    }
+
+    .btn-inventory{
+        @apply bg-slate-100 text-slate-900;
+    }
+
+    .down-arrow{
+        @apply  absolute bottom-[15%] left-[50%] translate-x-[-50%] translate-y-[-50%];
     }
 }
