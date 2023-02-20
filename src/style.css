@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 html {
-    font-size: 62.5%;
+    font-size: 80%;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -20,7 +20,7 @@ html {
     }
 
     .car-section{
-        @apply w-full h-screen
+        @apply w-full h-screen;
     }
 
     .car-img{
@@ -52,6 +52,7 @@ html {
     }
 
     .down-arrow{
-        @apply  absolute bottom-[15%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+        @apply  absolute bottom-[6%] left-[50%] translate-x-[-50%] translate-y-[-50%];
     }
+    
 }
