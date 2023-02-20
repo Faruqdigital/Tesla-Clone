@@ -6,11 +6,30 @@
 @tailwind utilities;
 
 html {
-    font-size: 80%;
+    font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
 }
 
+@media (max-width: 600px) {
+    html{
+        font-size: 55%;
+    }
+}
+
 @layer components {
+    .side-nav {
+        @apply bg-white transition-all duration-700 fixed top-0 right-[-100%] w-1/2 md:w-1/6 h-screen z-30 p-10 shadow-2xl;
+      }
+    
+      .close-icon {
+        @apply w-12 h-12 duration-500 hover:bg-slate-200 rounded-full p-1 cursor-pointer;
+      }
+    
+
+    .snap-feature{
+        @apply snap-y snap-mandatory h-screen overflow-scroll transition-all duration-500 scroll-smooth;
+    }
+
     .navbar{
         @apply flex justify-between w-full fixed top-0 z-10 h-28 px-10 items-center;
     }
@@ -20,7 +39,7 @@ html {
     }
 
     .car-section{
-        @apply w-full h-screen;
+        @apply w-full h-screen snap-always snap-start;
     }
 
     .car-img{
@@ -40,19 +59,19 @@ html {
     }
 
     .car-buttons{
-        @apply absolute bottom-[15%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+        @apply absolute bottom-[15%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col md:flex-row;
     }
 
     .btn{
-        @apply inline-block text-xl text-white bg-gray-700 font-medium px-10 pt-4 mx-2 rounded-[10rem] text-center uppercase w-[25rem] h-18;
+        @apply inline-block text-xl text-white bg-gray-700 my-2 px-10 pt-4 mx-2 rounded-[10rem] text-center font-bold tracking-widest uppercase w-[25rem] h-16;
     }
 
     .btn-inventory{
-        @apply bg-slate-100 text-slate-900;
+        @apply bg-slate-100 text-slate-900 font-bold tracking-widest;
     }
 
     .down-arrow{
-        @apply  absolute bottom-[6%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+        @apply  absolute bottom-[4%] left-[50%] translate-x-[-50%] translate-y-[-50%];
     }
     
 }
