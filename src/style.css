@@ -27,7 +27,7 @@ html {
     
 
     .snap-feature{
-        @apply snap-y snap-mandatory h-screen overflow-scroll transition-all duration-500 scroll-smooth;
+        @apply snap-y snap-mandatory h-screen transition-all duration-500 scroll-smooth;
     }
 
     .navbar{

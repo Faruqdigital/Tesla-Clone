@@ -9,6 +9,8 @@
     <link rel="shortcut icon"
         href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Tesla_T_symbol.svg/1200px-Tesla_T_symbol.svg.png"
         type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../dist/output.css">
 </head>
 
@@ -39,7 +41,7 @@
         <nav class="navbar">
 
             <!-- logo -->
-            <div class="logo mr-[9.5rem]">
+            <div class="logo mr-[9.5rem] cursor-pointer">
                 <a href="#model3">
                     <svg class="tds-icon tds-icon-logo-wordmark tds-site-logo-icon h-6" viewBox="0 0 342 35"
                         xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +72,7 @@
 
     </header>
 
-    <main class="snap-feature">
+    <main id="mainDiv" class="snap-feature">
 
         <!-- hero section model 3 -->
         <section id="model3" class="car-section relative">
@@ -256,23 +258,46 @@
 
         </section>
 
+        <footer aria-labelledby="footer-heading">
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+
+            <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-16">
+                <div class="flex flex-wrap items-baseline lg:justify-center">
+                    <span class="mt-2 text-2xl font-bold text-black">
+                        <a class="mr-2" href="#">Tesla © 2023</a>
+                        <a class="mr-2" href="#">Privacy & Legal</a>
+                        <a class="mr-2" href="#">Vehicle Recalls</a>
+                        <a class="mr-2" href="#"></a>
+                        <a class="mr-2" href="">Contact</a>
+                        <a class="mr-2" href="#">Careers</a>
+                        <a class="mr-2" href="#">News</a>
+                        <a class="mr-2" href="#">Engage</a>
+                        <a href="#">Locations</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+
     </main>
+
+
+
 
     <script>
         // open side menu
         document.getElementById("menu").addEventListener("click", () => {
-          document.getElementById("sideNav").classList.remove("right-[-50%]");
-          document.getElementById("sideNav").classList.add("right-0");
-          document.getElementById("mainDiv").classList.add("blur-sm");
+            document.getElementById("sideNav").classList.remove("right-[-50%]");
+            document.getElementById("sideNav").classList.add("right-0");
+            document.getElementById("mainDiv").classList.add("blur-sm");
         });
-  
+
         // close side menu
         document.getElementById("closeIcon").addEventListener("click", () => {
-          document.getElementById("sideNav").classList.add("right-[-50%]");
-          document.getElementById("sideNav").classList.remove("right-0");
-          document.getElementById("mainDiv").classList.remove("blur-sm");
+            document.getElementById("sideNav").classList.add("right-[-50%]");
+            document.getElementById("sideNav").classList.remove("right-0");
+            document.getElementById("mainDiv").classList.remove("blur-sm");
         });
-      </script>
+    </script>
 
 </body>
 
